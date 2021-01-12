@@ -1,0 +1,51 @@
+{
+  "name": "English-for-kids",
+  "version": "1.0.0",
+  "description": "English-for-kids",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
+    "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
+    "lint": "node_modules\\.bin\\eslint --debug src/",
+    "lint:write": "node_modules\\.bin\\eslint --debug src/ --fix",
+    "prettier": "prettier --write src/**/*.js"
+  },
+  "keywords": [
+    "js"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.12.1",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "bootstrap": "^4.5.3",
+    "bootstrap-toggle": "^2.2.2",
+    "bootstrap4-toggle": "^3.6.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.2.1",
+    "cross-env": "^7.0.2",
+    "css-loader": "^5.0.0",
+    "css-minimizer-webpack-plugin": "^1.1.5",
+    "eslint": "^7.13.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "fs": "0.0.1-security",
+    "html-webpack-plugin": "^5.0.0-alpha.7",
+    "https": "^1.0.0",
+    "jquery": "^3.5.1",
+    "mini-css-extract-plugin": "^1.0.0",
+    "node-sass": "^4.14.1",
+    "popper.js": "^1.16.1",
+    "postcss-loader": "^4.0.4",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.1.2",
+    "sass-loader": "^10.0.3",
+    "style-loader": "^2.0.0",
+    "sync-request": "^6.1.0",
+    "util": "^0.12.3",
+    "webpack": "^5.9.0",
+    "webpack-cli": "^4.0.0",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.2.0"
+  }
+}

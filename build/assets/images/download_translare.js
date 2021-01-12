@@ -1,0 +1,1 @@
+var https=require("https"),request=require("sync-request"),translation="xxxxxxxxxxx",res=request("GET","https://dictionary.skyeng.ru/api/public/v1/words/search?search="+description);translation=JSON.parse(res.getBody("utf8"))[0].meanings[0].translation.text;

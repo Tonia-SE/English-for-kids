@@ -1,0 +1,453 @@
+body {
+    margin: 0 auto;
+    max-width: 1200px;
+    //background-color: rgba(42, 163, 163, 0.3);
+}
+// .body {
+//     max-width: 1200px;
+//     margin: 0 auto;
+    
+// }
+
+//------------------------HEADER
+.navbar {
+    padding: 20px 7% 10px 7%;
+    background-color: $background-color-1;
+    flex-wrap: wrap !important;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-brand {
+    font-size: 2rem !important;
+    color: $color-1;
+    align-items: center;
+    margin-right: 0;
+}
+.dropdown {
+    width: 60%;
+    flex-wrap: wrap !important;
+    justify-content: flex-start;
+    align-items: center;
+}
+#dropdownMenuButton {
+    background: none;
+    border: none;
+    margin-right: 5%;
+    margin-bottom: 2%;
+}
+#dropdownMenuNav {
+    background-color:  $background-color-1;
+}
+#dropdownMenuNav a:hover {
+    color:  $color-2;
+}
+.toggle-handle {
+    background-color: $color-2;
+}
+.container-icon {
+    display: inline-block;
+    cursor: pointer;
+}
+.bar1, .bar2, .bar3 {
+    @include bar();
+}
+.change1 {
+    -webkit-transform: rotate(-45deg) translate(-8px, 7px);
+    transform: rotate(-45deg) translate(-8px, 7px);
+}
+.change2 {
+    opacity: 0;
+}
+.change3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -7px);
+    transform: rotate(45deg) translate(-8px, -7px);
+}
+.wrapper-menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.wrapper-btns {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.second-wrapper-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 25px;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-bottom: 0;
+}
+.switch input {
+    display:none;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $color-3;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border: solid 1px $color-5;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 28px;
+    width: 28px;
+    left: 2px;
+    bottom: 2px;
+    top: 2px;
+    right: 2px;
+    background-color: rgba(246, 255, 254, 0.911);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border: solid 1px $color-6;
+}
+input:checked + .slider {
+    background-color: $color-4;
+}
+input:focus + .slider {
+    box-shadow: 0 0 1px $color-4;
+}
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+.slider.round {
+    border-radius: 34px;
+}
+.slider.round:before {
+    border-radius: 50%;
+}
+.textBtn{
+    margin: 0 auto;
+    font-weight: 500;
+}
+#stat {
+    margin-left: 5%;
+    background-color: $color-3;
+    color: $color-1;
+    font-weight: 500;
+    border-color: $color-5;
+}
+#stat:hover {
+    background-color: $color-4;
+    color: $color-2;
+    border-color: $color-2;
+}
+.btn-success {
+    height: 38px;
+    background-color: $color-3;
+    color: $color-1;
+    font-weight: 500;
+    border-color: $color-5;
+}
+.btn-success:hover {
+    background-color: $color-4;
+    color: $color-2;
+    border-color: $color-2;
+    .toggle-handle {
+        border: $color-2;
+    }
+}
+.btn-danger {
+    height: 38px;
+    background-color: $color-4;
+    color: $color-1;
+    border-color: $color-5;
+}
+.btn-danger:hover {
+    background-color: $color-4;
+    color: $color-2;
+    border-color: $color-2;
+    .toggle-handle {
+        border: $color-2;
+    }
+}
+.toggle-handle {
+    border-color: $color-5;
+}
+
+// .toggle.btn {
+//     max-width: 75px !important;
+//     height: 34px !important;
+// }
+// .toggle-handle {
+//     width: 23% !important;
+// }
+
+
+
+//-----------------Overright defoult bootstrap styles
+.btn {
+    border-radius: 20;
+}
+button:hover, button:focus, button:visited, button:active {
+    box-shadow: none !important;
+    cursor: pointer;
+}
+small:hover, small:focus, small:visited, small:active, small:target {
+    cursor: pointer;
+}
+
+
+
+//------------------------ALBUM
+.album{
+    background: rgba(42, 163, 163, 0.3) !important;
+}
+.jumbotron {
+    margin-bottom: 0;
+    background-color: $color-2;
+}
+.py-5 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+}
+.jumbotron p:last-child {
+    margin-bottom: 0;
+}
+.jumbotron h1 {
+    font-weight: 400;
+}
+.jumbotron .container {
+    max-width: 40rem;
+}
+.wrapperBtns {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    min-height: 60px;
+    margin:0 3.1% 0.5% 3%;
+}
+.starsWrapper {
+    display: none;
+}
+.star {
+    font-size: 2rem;
+    color: $background-color-1;
+    opacity: 1;
+}
+#start_game {
+    height: 38px;
+    margin-left: 10%;
+    background-color: $color-3;
+    color: $color-1;
+    font-weight: 500;
+    border-color: rgb(166, 168, 168);
+}
+#start_game:hover {
+    background-color: $color-4;
+    color: $color-2;
+    border-color: $color-2;
+}
+#repeat {
+    color: $color-1;
+    background: none;
+    border: none;
+    font-size: 2.6rem;
+    padding: 0;
+    margin: 0 0 0 10%;
+    display: none;
+}
+#repeat:hover {
+    color: $color-4;
+}
+#card_btn-BUY:hover {
+    background-color: $background-color-1;
+    color: $color-2;
+    font-weight: 400;
+    border-color: $background-color-1;
+}
+.card-text { 
+    font-size: 1.2rem;
+}
+.col-md-3 {
+    padding: 2% 1.5% 0% 1.5% !important;
+}
+//--------------------------- Override default bootstrap bg colors to album
+.bg-light {
+    background-color: $background-color-1;
+}
+.bg-danger {
+    background-color: $background-color-2;
+}
+.bg-primary {
+    background-color: $background-color-3;
+}
+
+
+// ----------------FOOTER
+.footer-copyright {
+    padding-left: 4%;
+}
+.page-footer {
+    background-color: rgba(44, 138, 138, 0.5) !important;
+}
+.list-unstyled a {
+    text-decoration: none !important;
+    color: $color-1;
+}
+.list-unstyled a:hover {
+    text-decoration: none !important;
+    color: $color-2;
+}
+
+
+
+@media (max-width: 767px) {
+    .jumbotron {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+    // .col-md-4 {
+    //     padding: 8% 0% 8% 0% !important;
+    // }
+    .container-fluid {
+        padding: 0 20px 0 20px !important;
+    }
+    #text-column-1 {
+        padding: 0 20px 0 20px !important;
+    }
+    #text-column-2 {
+        padding: 0 20px 0 20px !important;
+    }
+    #text-column-3 {
+        padding: 0 20px 0 20px !important;
+    }
+    img {
+        width: 30%;
+    }
+    .col-md-3 {
+        flex-basis: 25% !important
+    }
+    // #text-column-3 {
+    //     flex-basis: 100%;
+    // }
+    // .second-wrapper-btns {
+    //     margin-top: 10%;
+    // }
+}
+@media (max-width: 700px) {
+    
+    .navbar-brand {
+        font-size: 1.3rem !important;
+    }
+    .dropdown {
+        width: 55%;
+    }
+    #dropdownMenuButton {
+        margin: 0;
+    }
+    .bar1, .bar2, .bar3 {
+        @include bar1();
+    }
+    .change1 {
+        -webkit-transform: rotate(-45deg) translate(-4px, 4px);
+        transform: rotate(-45deg) translate(-4px, 4px);
+    }
+    .change2 {
+        opacity: 0;
+    }
+    .change3 {
+        -webkit-transform: rotate(45deg) translate(-4px, -4px);
+        transform: rotate(45deg) translate(-4px, -4px);
+    }
+    .wrapper-btns {
+        width: 43%;
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    #stat {
+        margin-left: 5%;
+        max-width: 60px !important;
+        height: 34px !important;
+        font-size: 14px;
+        line-height: 1rem !important;
+    }
+    .btn.btn-success {
+        font-size: 14px;
+        line-height: 1.2rem !important;
+        padding-left: 0.5rem !important;
+    }
+    .btn.btn-danger {
+        font-size: 14px;
+        line-height: 1.2rem !important;
+        padding-right: 0.5rem !important;
+    }
+    .toggle.btn {
+        max-width: 60px !important;
+        max-height: 30px !important;
+    }
+    .wrapperBtns {
+        justify-content: space-between;
+        margin:0 3.1% 0.5% 3%;
+    }
+    #start_game {
+        height: 34px;
+        font-size: 14px;
+        line-height: 1.3rem !important;
+    }
+    .card-text {
+        font-size: 0.95rem;
+    }
+}
+@media (max-width: 600px) {
+    .col-md-3 {
+        padding: 5% 15% 5% 15% !important;
+        flex-basis: 100% !important
+    }
+    .star {
+        font-size: 1.7rem;
+    }
+    #repeat {
+        font-size: 2.2rem;
+    }
+}
+@media (max-width: 395px) {
+    .navbar {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    .navbar-brand {
+        font-size: 0.9rem !important;
+    }
+    #stat {
+        margin-left: 3%;
+    }
+    .star {
+        font-size: 1.3rem;
+    }
+    #start_game {
+        height: 34px;
+        margin-left: 0%;
+    }
+    #repeat {
+        font-size: 1.8rem;
+    }
+    .wrapperBtns {
+        margin:0 10% 0.5% 10%;
+    }
+}
+
+
+

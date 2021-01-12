@@ -1,0 +1,603 @@
+body {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+//------------------------HEADER
+.navbar {
+    padding: 10px 7% 0px 7%;
+    background-color:  rgb(79, 173, 173) !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-brand {
+    font-size: 2rem !important;
+    color: $color-1;
+    align-items: center;
+    margin-right: 0;
+}
+.dropdown {
+    width: 60%;
+    flex-wrap: wrap !important;
+    justify-content: flex-start;
+    align-items: center;
+}
+#dropdownMenuButton {
+    background: none;
+    border: none;
+    margin-right: 5%;
+    margin-bottom: 2%;
+}
+#dropdownMenuNav {
+    background-color:  $background-color-1;
+}
+#dropdownMenuNav a:hover {
+    color:  $color-2;
+}
+.toggle-handle {
+    background-color: $color-2;
+}
+.container-icon {
+    display: inline-block;
+    cursor: pointer;
+}
+.bar1, .bar2, .bar3 {
+    @include bar();
+}
+.change1 {
+    -webkit-transform: rotate(-45deg) translate(-8px, 7px);
+    transform: rotate(-45deg) translate(-8px, 7px);
+}
+.change2 {
+    opacity: 0;
+}
+.change3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -7px);
+    transform: rotate(45deg) translate(-8px, -7px);
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: -13.5%;
+    z-index: 1000;
+    display: none;
+    float: left;
+    padding: 7% 0 10% 0;
+    background-color: rgb(79, 173, 173);
+    border: none;
+    border-radius: 0;
+    font-weight: 600;
+    font-size: 1.5rem;
+    transition: left;
+}
+.dropdown-item {
+    width: 25vw;
+    padding-left: 20% !important;
+    padding-right: 30%;
+    line-height: 3rem;
+}
+.dropdown-item:hover {
+    background-color: $color-4;
+    color: $color-2;
+}
+#home {
+    font-weight: 600;
+    font-size: 2rem;
+}
+.dropdown-divider {
+    border-top-color: $background-color-1;
+    margin: 2.5vh 0 2vh 0;
+}
+.wrapper-menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.wrapper-btns {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.second-wrapper-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 25px;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-bottom: 0;
+}
+.switch input {
+    display:none;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $color-3;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border: solid 1px $color-5;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 28px;
+    width: 28px;
+    left: 2px;
+    bottom: 2px;
+    top: 2px;
+    right: 2px;
+    background-color: rgba(246, 255, 254, 0.911);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border: solid 1px $color-6;
+}
+input:checked + .slider {
+    background-color: $color-4;
+}
+input:focus + .slider {
+    box-shadow: 0 0 1px $color-4;
+}
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+.slider.round {
+    border-radius: 34px;
+}
+.slider.round:before {
+    border-radius: 50%;
+}
+.textBtn{
+    margin: 0 auto;
+    font-weight: 500;
+}
+#stat {
+    margin-left: 5% !important;
+    @include button();
+}
+#stat:hover {
+    @include buttonHover();
+}
+.toggle-handle {
+    border-color: $color-5;
+}
+.btn:hover, 
+.btn:target, 
+.btn:focus{
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+//------------------------ALBUM
+.album{
+    background: rgba(42, 163, 163, 0.3) !important;
+}
+.py-5 {
+    padding: 3% 0 3% 0 !important;
+}
+.wrapperBtns {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    min-height: 60px;
+    margin:0 3.1% 0.5% 3%;
+}
+.starsWrapper {
+    display: none;
+}
+.star {
+    font-size: 2rem;
+    color: $background-color-1;
+    opacity: 1;
+}
+#start_game {
+    @include button();
+}
+#start_game:hover {
+    @include buttonHover();
+}
+#repeat {
+    color: $color-1;
+    background: none;
+    border: none;
+    font-size: 2.6rem;
+    padding: 0;
+    margin: 0 0 0 10%;
+    display: none;
+}
+#repeat:hover {
+    color: $color-4;
+}
+.bd-placeholder-img.card-img-top.game {
+    margin: 30% 0 30% 0;
+    padding: 0 6% 0 6%;
+}
+#card_btn-BUY {
+    line-height: 1.3 !important;
+    padding: 10% 20% 10% 20% !important;
+}
+#card_btn-BUY:hover {
+    background-color: rgb(79, 173, 173);
+    color: $color-2;
+    font-weight: 400;
+}
+.shadow-sm {
+    -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2) !important;
+}
+.card.mb-4.shadow-sm:hover {
+    -webkit-box-shadow: 0 0.125rem 1rem rgba(0, 0, 0, 0.5) !important;
+    box-shadow: 0 0.125rem 1rem rgba(0, 0, 0, 0.5) !important;
+}
+.card-text { 
+    font-size: 1.2rem;
+}
+.col-md-3 {
+    padding: 1.5% !important;
+}
+.mb-4 {
+    margin-bottom: 0 !important;
+}
+.card-body {
+    text-align: left !important;
+}
+.statisics-wrapper {
+    width: 100%;
+}
+th.ascend::after {
+    font-size: 0.9rem;
+    content: '▲';
+}
+th.descend::after {
+    font-size: 0.9rem;
+    content: '▼';
+}
+.wrapper-thread-btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 2%;
+}
+#reset,
+#repeat-difficult {
+    margin-left: 3% !important;
+    @include button();
+}
+#reset:hover,
+#repeat-difficult:hover {
+    @include buttonHover();
+}
+th {
+    font-weight: 400;
+}
+.thead-dark th{
+    background-color: $background-color-3;
+    border-top: solid 1px $color-5;
+    border-bottom: solid 1px $color-5;
+    font-weight: 500;
+    color: $color-1;
+}
+.thead-dark th:hover {
+    color: $color-2;
+}
+tr:hover {
+    background-color: $color-3;
+}
+
+// ----------------FOOTER
+.footer-copyright {
+    padding-left: 4%;
+}
+.page-footer {
+    background-color: rgba(44, 138, 138, 0.5) !important;
+}
+.list-unstyled a {
+    text-decoration: none !important;
+    color: $color-1;
+}
+.list-unstyled a:hover {
+    text-decoration: none !important;
+    color: $color-2;
+}
+#logo {
+    width: 50%;
+}
+#text-column-3 {
+    padding: 0 50px 0 0px !important;
+    text-align: right;
+}
+
+//---------------------MODAL WINDOW
+.modal {
+    display: none; 
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(42, 163, 163, 0.85); 
+}
+.close {
+    position: fixed;
+    top: 5%;
+    right: 5%;
+    color: $color-1;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: $color-2;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-img {
+    margin: 15% 0 0 0;
+    width: 500px;
+    height: 500px;
+}
+.modal-text {
+    margin: 5% 20% 5% 20%;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+//-----------------MEDIA
+@media (max-width: 767px) {
+    .container-fluid {
+        padding: 0 20px 0 20px !important;
+    }
+    #text-column-1 {
+        padding: 0 20px 0 20px !important;
+    }
+    #text-column-2 {
+        padding: 0 20px 0 20px !important;
+    }
+    #text-column-3 {
+        padding: 0 20px 0 20px !important;
+    }
+    .dropdown-menu {
+        font-size: 1.3rem;
+        transition: left;
+    }
+    .dropdown-item {
+        line-height: 2rem;
+    }
+    #home {
+        font-size: 1.6rem;
+    }
+    .col-md-3 {
+        flex-basis: 25% !important
+    }
+    .container {
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        text-align: center;
+    }
+    #start_game {
+        margin-left: 0 !important;
+    }
+    .row {
+        margin: 0 auto;
+    }
+    .card-text {
+        font-size: 0.94rem !important;
+    }
+    table {
+        margin: 0.5vw 0 1vw 5vw !important;
+    }
+    #text-column-3 {
+        min-width: 100%;
+        padding: 0 !important;
+    }
+    .footer-ul {
+        margin-right: 30px;
+    }
+    #logo {
+        width: 15% !important;
+    }
+    .clearfix.w-100.d-md-none.pb-3 {
+        margin-bottom: 0 !important;
+    }
+    .footer-copyright.text-right.py-3 {
+        padding-top: 0 !important;
+    }
+    .footer-ul {
+        margin-bottom: 0 !important;
+    }
+    .modal-img {
+        width: 300px;
+        height: 300px;
+    }
+}
+@media (max-width: 700px) {
+    .navbar-brand {
+        font-size: 1.3rem !important;
+    }
+    .dropdown {
+        width: 55%;
+    }
+    #dropdownMenuButton {
+        margin: 0;
+    }
+    .bar1, .bar2, .bar3 {
+        @include bar1();
+    }
+    .change1 {
+        -webkit-transform: rotate(-45deg) translate(-4px, 4px);
+        transform: rotate(-45deg) translate(-4px, 4px);
+    }
+    .change2 {
+        opacity: 0;
+    }
+    .change3 {
+        -webkit-transform: rotate(45deg) translate(-4px, -4px);
+        transform: rotate(45deg) translate(-4px, -4px);
+    }
+    .dropdown-menu {
+        left: -15%;
+        transition: left;
+    }
+    .wrapper-btns {
+        width: 43%;
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    #stat {
+        margin-left: 5%;
+        max-width: 60px !important;
+        height: 34px !important;
+        font-size: 14px;
+        line-height: 1rem !important;
+    }
+    .btn.btn-success {
+        font-size: 14px;
+        line-height: 1.2rem !important;
+        padding-left: 0.5rem !important;
+    }
+    .btn.btn-danger {
+        font-size: 14px;
+        line-height: 1.2rem !important;
+        padding-right: 0.5rem !important;
+    }
+    .toggle.btn {
+        max-width: 60px !important;
+        max-height: 30px !important;
+    }
+    .wrapperBtns {
+        justify-content: space-between;
+        margin:0 3.1% 0.5% 3%;
+    }
+    #start_game {
+        height: 34px;
+        font-size: 14px;
+        line-height: 1.3rem !important;
+    }
+    .card-text {
+        font-size: 0.95rem;
+    }
+    .modal-img {
+        width: 250px;
+        height: 250px;
+    }
+    .modal-text {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 600px) {
+    .navbar {
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+    }
+    .dropdown-menu {
+        left: -8%;
+        font-size: 1.1rem;
+        transition: left;
+    }
+    .dropdown-item {
+        margin: 0 !important;
+        width: 30vw;
+        line-height: 1.5rem;
+    }
+    .dropdown-item:hover {
+        background-color: rgb(79, 173, 173) !important;
+    }
+    #home {
+        font-size: 1.3rem;
+    }
+    table {
+        font-size: 0.8rem !important;
+        margin: 0.5vw 0 1vw 1vw !important;
+    }
+    th {
+        padding-left: 1.5% !important;
+        padding-right: 1.5% !important;
+    }
+    .col-md-3 {
+        padding: 5% 15% 5% 15% !important;
+        flex-basis: 100% !important
+    }
+    .star {
+        font-size: 1.5rem !important;
+    }
+    #repeat {
+        font-size: 2.2rem;
+    }
+    .bd-placeholder-img.card-img-top.game {
+        margin: 18% 0 18% 0;
+    }
+    .footer-copyright.text-right.py-3 {
+        font-size: 0.70rem;
+    }
+    .card-text {
+        font-size: 1.3rem !important;
+    }
+    .modal-img {
+        width: 200px;
+        height: 200px;
+    }
+}
+@media (max-width: 395px) {
+    .navbar {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    .navbar-brand {
+        font-size: 0.9rem !important;
+    }
+    #stat {
+        margin-left: 3%;
+    }
+    .star {
+        font-size: 1.3rem;
+    }
+    #start_game {
+        height: 34px;
+        margin-left: 0%;
+    }
+    #repeat {
+        font-size: 1.8rem;
+    }
+    .wrapperBtns {
+        margin:0 10% 0.5% 10%;
+    }
+    .star {
+        font-size: 1rem !important;
+    }
+    table {
+        font-size: 0.8rem !important;
+        margin: 0.5vw 0 1vw 0 !important;
+    }
+    .modal-img {
+        width: 180px;
+        height: 180px;
+    }
+    .modal-text {
+        font-size: 1.2rem;
+    }
+}
+
+
+
